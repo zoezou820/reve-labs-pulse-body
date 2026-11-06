@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pulse Body</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <main>
+    <section class="controls">
+      <p class="eyebrow">Local audio-reactive renderer</p>
+      <h1>Pulse Body</h1>
+      <p class="intro">Turn a music file into a particle-body visual with a chest-core pulse.</p>
+
+      <form id="render-form">
+        <fieldset>
+          <legend>01 / Audio</legend>
+          <label class="file-drop">Choose audio
+            <input id="audio" type="file" name="audio" accept="audio/*" required>
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>02 / Visual template</legend>
+          <div class="template-grid">
+            {% for template in templates %}
+            <label class="template-card">
+              <input type="radio" name="template_id" value="{{ template.id }}" {% if loop.first %}checked{% endif %}>
+              <img src="/{{ template.preview }}" alt="{{ template.name }} preview">
+              <span><strong>{{ template.name }}</strong><small>{{ template.description }}</small></span>
+            </label>
+            {% endfor %}
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>03 / Metadata</legend>
+          <label>Track title<input id="track-title" name="track_title" value="Untitled Track" required></label>
+          <label>Collection<input name="album_title" value="Sound Field Study"></label>
+          <div class="row">
+            <label>Label<input name="label_name" value="REVE LABS SOUND"></label>
+            <label>Archive code<input name="archive_code" value="RLS-PBH-001 / SOUND FIELD STUDY"></label>
+          </div>
+          <div class="row">
+            <label>Preview seconds<input name="max_duration" value="10" placeholder="Blank for full track"></label>
+            <label>Quality<select name="crf"><option value="23">Preview</option><option value="18">High</option></select></label>
+          </div>
+        </fieldset>
+        <button type="submit">Generate video</button>
+      </form>
+    </section>
+
+    <section class="output" id="output">
+      <div class="empty">Your local render will appear here.</div>
+    </section>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
