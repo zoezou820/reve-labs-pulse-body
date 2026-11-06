@@ -25,7 +25,7 @@ Those features drive a locked chest-core system: radial refraction, bright core,
 ## Install
 
 ```bash
-git clone https://github.com/YOUR-ACCOUNT/reve-labs-pulse-body.git
+git clone https://github.com/zoezou820/reve-labs-pulse-body.git
 cd reve-labs-pulse-body
 python3 -m venv .venv
 source .venv/bin/activate
