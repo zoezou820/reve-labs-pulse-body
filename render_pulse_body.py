@@ -113,10 +113,16 @@ def fit_source(source: Path):
 
 def load_font(size, index=0):
     paths = [
+        "/System/Library/Fonts/PingFang.ttc",
+        "/System/Library/Fonts/Hiragino Sans GB.ttc",
+        "/System/Library/Fonts/STHeiti Light.ttc",
+        "/System/Library/Fonts/Supplemental/Arial Unicode.ttf",
         "/System/Library/Fonts/HelveticaNeue.ttc",
         "/System/Library/Fonts/Supplemental/Helvetica.ttc",
         "/System/Library/Fonts/Supplemental/Arial.ttf",
+        "/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc",
         "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+        "C:/Windows/Fonts/msyh.ttc",
         "C:/Windows/Fonts/arial.ttf",
     ]
     for path in paths:
