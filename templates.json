@@ -1,0 +1,12 @@
+{
+  "templates": [
+    {
+      "id": "pulse_body",
+      "name": "Pulse Body",
+      "description": "The original REVE LABS SOUND data body with an audio-reactive chest core and radial gravity waves.",
+      "preview": "assets/reve_labs_pixel_body.png",
+      "source": "assets/reve_labs_pixel_body.png",
+      "renderer": "render_pulse_body.py"
+    }
+  ]
+}

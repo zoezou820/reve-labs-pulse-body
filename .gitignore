@@ -1,0 +1,15 @@
+.DS_Store
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+outputs/
+*.wav
+*.mp3
+*.m4a
+*.aac
+*.aiff
+*.flac
+*.mp4
+!docs/demo.mp4
